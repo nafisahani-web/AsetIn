@@ -1,19 +1,29 @@
 <div class="sidebar">
 
+    <!-- Logo -->
     <div class="logo text-center py-4">
         <i class="bi bi-box-seam display-5"></i>
-        <h2 class="fw-bold mt-2 mb-0">ASETIN</h2>
-        <small class="text-white-50">Inventory System</small>
+
+        <h2 class="fw-bold mt-2 mb-0">
+            ASETIN
+        </h2>
+
+        <small class="text-white-50">
+            Inventory System
+        </small>
     </div>
 
-    <div class="px-3">
+    <!-- Menu -->
+    <div class="flex-grow-1 px-3 py-3">
 
+        <!-- Dashboard -->
         <a href="{{ route('dashboard') }}"
            class="sidebar-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
             <i class="bi bi-speedometer2"></i>
             <span>Dashboard</span>
         </a>
 
+        <!-- Master Data -->
         <div class="sidebar-title">
             MASTER DATA
         </div>
@@ -25,10 +35,10 @@
         </a>
 
         <a href="{{ route('brand.index') }}"
-   class="sidebar-link {{ request()->routeIs('brand.*') ? 'active' : '' }}">
-    <i class="bi bi-bookmark"></i>
-    <span>Brand</span>
-</a>
+           class="sidebar-link {{ request()->routeIs('brand.*') ? 'active' : '' }}">
+            <i class="bi bi-bookmark"></i>
+            <span>Brand</span>
+        </a>
 
         <a href="{{ route('supplier.index') }}"
            class="sidebar-link {{ request()->routeIs('supplier.*') ? 'active' : '' }}">
@@ -42,46 +52,56 @@
             <span>Location</span>
         </a>
 
-        <div class="sidebar-title">
+        <!-- Transaksi -->
+        <div class="sidebar-title mt-4">
             TRANSAKSI
         </div>
 
         <a href="{{ route('asset.index') }}"
-   class="sidebar-link {{ request()->routeIs('asset.*') ? 'active' : '' }}">
-    <i class="bi bi-box"></i>
-    <span>Asset</span>
-</a>
+           class="sidebar-link {{ request()->routeIs('asset.*') ? 'active' : '' }}">
+            <i class="bi bi-box"></i>
+            <span>Asset</span>
+        </a>
 
-        <a href="#" class="sidebar-link">
+        <a href="{{ route('warranty.index') }}"
+           class="sidebar-link {{ request()->routeIs('warranty.*') ? 'active' : '' }}">
             <i class="bi bi-shield-check"></i>
             <span>Warranty</span>
         </a>
 
-        <a href="#" class="sidebar-link">
+        <a href="#"
+           class="sidebar-link">
             <i class="bi bi-tools"></i>
             <span>Maintenance</span>
         </a>
 
-        <a href="#" class="sidebar-link">
+        <a href="#"
+           class="sidebar-link">
             <i class="bi bi-file-earmark-text"></i>
             <span>Document</span>
         </a>
 
-        <a href="#" class="sidebar-link">
+        <a href="#"
+           class="sidebar-link">
             <i class="bi bi-bar-chart"></i>
             <span>Report</span>
         </a>
 
     </div>
 
-    <div class="mt-auto px-3 pb-4">
+    <!-- Logout -->
+    <div class="p-3 border-top border-light border-opacity-25">
 
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <button type="submit" class="sidebar-link border-0 bg-transparent w-100 text-start">
+            <button type="submit"
+                    class="sidebar-link border-0 bg-transparent text-start w-100">
+
                 <i class="bi bi-box-arrow-right"></i>
+
                 <span>Logout</span>
+
             </button>
 
         </form>

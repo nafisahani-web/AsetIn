@@ -44,10 +44,10 @@ class Asset extends Model
         return $this->belongsTo(Location::class);
     }
 
-    public function warranty(): HasOne
-    {
-        return $this->hasOne(Warranty::class);
-    }
+   public function warranty()
+{
+    return $this->hasOne(Warranty::class);
+}
 
     public function maintenances(): HasMany
     {

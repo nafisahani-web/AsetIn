@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Warranty extends Model
 {
@@ -13,10 +12,10 @@ class Warranty extends Model
         'tanggal_mulai',
         'tanggal_berakhir',
         'status',
-        'deskripsi'
+        'deskripsi',
     ];
 
-    public function asset(): BelongsTo
+    public function asset()
     {
         return $this->belongsTo(Asset::class);
     }

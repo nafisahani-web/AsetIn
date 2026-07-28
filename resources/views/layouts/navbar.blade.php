@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom px-4">
 
-    <div class="container-fluid">
+    <div class="w-100 d-flex align-items-center">
 
         <h4 class="mb-0 fw-bold">
             @yield('title')

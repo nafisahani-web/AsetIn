@@ -60,7 +60,7 @@
                 id="assetTable"
                 class="table table-bordered table-hover align-middle">
 
-                <thead class="table-primary">
+                <thead class="table-dark">
 
                 <tr>
 
