@@ -353,5 +353,36 @@ table.dataTable thead th{
 
 @stack('scripts')
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const sidebar = document.querySelector('.sidebar');
+
+    if (!sidebar) return;
+
+    // Scroll ke menu yang sedang aktif
+    const activeMenu = document.querySelector('.sidebar-link.active');
+
+    if (activeMenu) {
+        activeMenu.scrollIntoView({
+            block: 'center'
+        });
+    }
+
+    // Kembalikan posisi scroll sebelumnya
+    const savedScroll = sessionStorage.getItem('sidebarScroll');
+
+    if (savedScroll !== null) {
+        sidebar.scrollTop = parseInt(savedScroll);
+    }
+
+    // Simpan posisi scroll
+    sidebar.addEventListener('scroll', function () {
+        sessionStorage.setItem('sidebarScroll', sidebar.scrollTop);
+    });
+
+});
+</script>
+
 </body>
 </html>

@@ -6,6 +6,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MaintenanceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
     Route::resource('category', App\Http\Controllers\CategoryController::class);
+    Route::resource('maintenance', MaintenanceController::class);
     Route::resource('warranty', WarrantyController::class);
     Route::resource('asset', AssetController::class);
     Route::resource('location', LocationController::class);

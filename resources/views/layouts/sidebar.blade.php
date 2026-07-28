@@ -69,11 +69,11 @@
             <span>Warranty</span>
         </a>
 
-        <a href="#"
-           class="sidebar-link">
-            <i class="bi bi-tools"></i>
-            <span>Maintenance</span>
-        </a>
+        <a href="{{ route('maintenance.index') }}"
+   class="sidebar-link {{ request()->routeIs('maintenance.*') ? 'active' : '' }}">
+    <i class="bi bi-tools"></i>
+    <span>Maintenance</span>
+</a>
 
         <a href="#"
            class="sidebar-link">
