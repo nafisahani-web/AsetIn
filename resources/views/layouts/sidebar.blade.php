@@ -81,11 +81,11 @@
     <span>Document</span>
 </a>
 
-        <a href="#"
-           class="sidebar-link">
-            <i class="bi bi-bar-chart"></i>
-            <span>Report</span>
-        </a>
+        <a href="{{ route('report.index') }}"
+   class="sidebar-link {{ request()->routeIs('report.*') ? 'active' : '' }}">
+    <i class="bi bi-bar-chart"></i>
+    <span>Report</span>
+</a>
 
     </div>
 

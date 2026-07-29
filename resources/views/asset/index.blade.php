@@ -167,44 +167,22 @@
 
                     </td>
 
-                    <td>
+<td>
 
-                        @if($asset->status=='Aktif')
+    @if($asset->status == 'Aktif')
+        <span class="badge bg-success">Aktif</span>
 
-                        <span class="badge bg-success">
+    @elseif($asset->status == 'Dipinjam')
+        <span class="badge bg-info">Dipinjam</span>
 
-                            Aktif
+    @elseif($asset->status == 'Maintenance')
+        <span class="badge bg-warning text-dark">Maintenance</span>
 
-                        </span>
+    @else
+        <span class="badge bg-danger">Rusak</span>
+    @endif
 
-                        @elseif($asset->status=='Dipinjam')
-
-                        <span class="badge bg-info">
-
-                            Dipinjam
-
-                        </span>
-
-                        @elseif($asset->status=='Maintenance')
-
-                        <span class="badge bg-warning text-dark">
-
-                            Maintenance
-
-                        </span>
-
-                        @else
-
-                        <span class="badge bg-danger">
-
-                            Rusak
-
-                        </span>
-
-                        @endif
-
-                    </td>
-
+</td>
                     <td class="text-center">
 
                         <button
