@@ -57,11 +57,13 @@
             TRANSAKSI
         </div>
 
-        <a href="{{ route('asset.index') }}"
-           class="sidebar-link {{ request()->routeIs('asset.*') ? 'active' : '' }}">
-            <i class="bi bi-box"></i>
-            <span>Asset</span>
-        </a>
+        @if(auth()->user()->peran === 'admin')
+    <a href="{{ route('asset.index') }}"
+       class="sidebar-link {{ request()->routeIs('asset.*') ? 'active' : '' }}">
+        <i class="bi bi-box"></i>
+        <span>Asset</span>
+    </a>
+@endif
 
         <a href="{{ route('warranty.index') }}"
            class="sidebar-link {{ request()->routeIs('warranty.*') ? 'active' : '' }}">

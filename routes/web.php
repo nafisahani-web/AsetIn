@@ -39,6 +39,7 @@ Route::get('/dashboard', function () {
         ->take(5)
         ->get(),
 ]);
+
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -53,7 +54,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/report/excel', [ReportController::class, 'exportExcel'])->name('report.excel');
 
     Route::resource('warranty', WarrantyController::class);
-    Route::resource('asset', AssetController::class);
+    Route::resource('asset', AssetController::class)
+    ->middleware('admin');
     Route::resource('location', LocationController::class);
     Route::resource('supplier', SupplierController::class);
     Route::resource('brand', BrandController::class);
