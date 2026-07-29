@@ -75,11 +75,11 @@
     <span>Maintenance</span>
 </a>
 
-        <a href="#"
-           class="sidebar-link">
-            <i class="bi bi-file-earmark-text"></i>
-            <span>Document</span>
-        </a>
+        <a href="{{ route('document.index') }}"
+   class="sidebar-link {{ request()->routeIs('document.*') ? 'active' : '' }}">
+    <i class="bi bi-file-earmark-text"></i>
+    <span>Document</span>
+</a>
 
         <a href="#"
            class="sidebar-link">

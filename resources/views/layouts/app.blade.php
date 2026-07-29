@@ -288,8 +288,7 @@ table.dataTable thead th{
     border-radius:10px;
 }
 
-.btn-warning,
-.btn-danger{
+.table-action-btn{
     width:40px;
     height:40px;
     border-radius:50%;
@@ -346,6 +345,9 @@ table.dataTable thead th{
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- DataTables -->
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
