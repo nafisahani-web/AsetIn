@@ -1,58 +1,284 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ASETIN - Inventory Management System
+
+ASETIN (Sistem Manajemen Inventaris Aset) adalah aplikasi berbasis web yang dikembangkan untuk mengelola data aset organisasi secara efisien. Sistem ini menyediakan fitur untuk mengelola kategori aset, merek, pemasok, lokasi, garansi, catatan pemeliharaan, dokumen pendukung, dan laporan. Aplikasi ini juga menerapkan kontrol akses berbasis peran untuk membedakan izin administrator dan staf.
+
+---
+
+## Project Information
+
+| Item | Description |
+|------|-------------|
+| Framework | Laravel 13 |
+| Language | PHP 8.3 |
+| Database | MySQL |
+| Container | Docker |
+| Frontend | Bootstrap 5 |
+| Template Engine | Blade |
+| ORM | Eloquent |
+| Authentication | Laravel Authentication |
+| Role | Administrator & Staff |
+
+---
+
+## Features
+
+- User Authentication (Login & Logout)
+- Dashboard
+- Category Management
+- Brand Management
+- Supplier Management
+- Location Management
+- Asset Management
+- Warranty Management
+- Maintenance Management
+- Document Management
+- Report Export (PDF & Excel)
+- Role-Based Access Control
+
+---
+
+## User Roles
+
+### Administrator
+
+Administrator memiliki akses penuh ke semua modul.
+
+- Dashboard
+- Category
+- Brand
+- Supplier
+- Location
+- Asset
+- Warranty
+- Maintenance
+- Document
+- Report
+
+### Staff
+
+Staf bisa mengakses semua modul kecuali Manajemen Aset.
+
+- Dashboard
+- Category
+- Brand
+- Supplier
+- Location
+- Warranty
+- Maintenance
+- Document
+- Report
+
+---
+
+## Database Structure
+
+| Table |
+|--------|
+| users |
+| categories |
+| brands |
+| suppliers |
+| locations |
+| assets |
+| warranties |
+| maintenances |
+| documents |
+
+---
+
+## Entity Relationship Diagram (ERD)
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <img src="screenshots/ERD ss.jpg" width="900">
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# System Screenshots
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Login
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p align="center">
+    <img src="screenshots/login.jpg" width="900">
+</p>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Dashboard
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p align="center">
+    <img src="screenshots/dashboard.jpg" width="900">
+</p>
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## Category
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+<p align="center">
+    <img src="screenshots/category.jpg" width="900">
+</p>
+
+---
+
+## Brand
+
+<p align="center">
+    <img src="screenshots/brand.jpg" width="900">
+</p>
+
+---
+
+## Supplier
+
+<p align="center">
+    <img src="screenshots/supplier.jpg" width="900">
+</p>
+
+---
+
+## Location
+
+<p align="center">
+    <img src="screenshots/location.jpg" width="900">
+</p>
+
+---
+
+## Asset
+
+<p align="center">
+    <img src="screenshots/asset.jpg" width="900">
+</p>
+
+---
+
+## Warranty
+
+<p align="center">
+    <img src="screenshots/warranty.jpg" width="900">
+</p>
+
+---
+
+## Maintenance
+
+<p align="center">
+    <img src="screenshots/maintenance.jpg" width="900">
+</p>
+
+---
+
+## Document
+
+<p align="center">
+    <img src="screenshots/document.jpg" width="900">
+</p>
+
+---
+
+## Report
+
+<p align="center">
+    <img src="screenshots/report.jpg" width="900">
+</p>
+
+---
+
+## Installation
+
+Clone the repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/nafisahani-web/AsetIn.git
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Go to the project directory
 
-## Contributing
+```bash
+cd AsetIn
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Start Docker
 
-## Code of Conduct
+```bash
+docker compose up -d
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Access the application container
 
-## Security Vulnerabilities
+```bash
+docker compose exec app bash
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Install dependencies
+
+```bash
+composer install
+```
+
+Copy environment configuration
+
+```bash
+cp .env.example .env
+```
+
+Generate application key
+
+```bash
+php artisan key:generate
+```
+
+Run database migrations
+
+```bash
+php artisan migrate
+```
+
+---
+
+## Demo Account
+
+### Administrator
+
+| Email | Password |
+|-------|----------|
+| admin@asetin.com | admin123 |
+
+### Staff
+
+| Email | Password |
+|-------|----------|
+| staff@asetin.com | staff123 |
+
+> Akun-akun ini disediakan hanya untuk tujuan demonstrasi.
+
+---
+
+## Main Modules
+
+- Dashboard
+- Category
+- Brand
+- Supplier
+- Location
+- Asset
+- Warranty
+- Maintenance
+- Document
+- Report
+
+---
+
+## Developer
+
+**Name** : Nafisahani
+
+**Study Program** : Information Systems
+
+**University** : Universitas Nasional
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project was developed as part of an academic assignment for the Information Systems Study Program at Universitas Nasional.
