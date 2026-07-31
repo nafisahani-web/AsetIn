@@ -427,26 +427,26 @@
 </div>
 @push('scripts')
 <script>
-
 $(document).ready(function () {
 
-$(document).ready(function () {
-
-    // Tambahkan di sini
+    // Alert otomatis hilang
     setTimeout(function () {
         $('.alert').fadeOut();
     }, 3000);
 
-    $('#warrantyTable').DataTable();
+    // DataTable
+    $('#warrantyTable').DataTable({
+    autoWidth: false
+});
 
-    $('.btnEdit').click(function () {
+    // ==========================
+    // EDIT WARRANTY
+    // ==========================
+    $(document).on('click', '.btnEdit', function () {
 
         let id = $(this).data('id');
 
-        $('#formEdit').attr(
-            'action',
-            '/warranty/' + id
-        );
+        $('#formEdit').attr('action', '/warranty/' + id);
 
         $('#edit_asset').val($(this).data('asset'));
         $('#edit_no').val($(this).data('no'));
@@ -454,18 +454,24 @@ $(document).ready(function () {
         $('#edit_akhir').val($(this).data('akhir'));
         $('#edit_deskripsi').val($(this).data('deskripsi'));
 
-        $('#modalEdit').modal('show');
+        const modal = bootstrap.Modal.getOrCreateInstance(
+            document.getElementById('modalEdit')
+        );
+
+        modal.show();
 
     });
 
-    $('.formDelete').submit(function (e) {
+    // ==========================
+    // DELETE WARRANTY
+    // ==========================
+    $(document).on('submit', '.formDelete', function (e) {
 
         e.preventDefault();
 
         let form = this;
 
         Swal.fire({
-
             title: 'Hapus Data?',
             text: 'Data warranty akan dihapus permanen.',
             icon: 'warning',
@@ -474,13 +480,10 @@ $(document).ready(function () {
             cancelButtonColor: '#6c757d',
             confirmButtonText: 'Ya, Hapus',
             cancelButtonText: 'Batal'
-
         }).then((result) => {
 
             if (result.isConfirmed) {
-
                 form.submit();
-
             }
 
         });
@@ -488,7 +491,6 @@ $(document).ready(function () {
     });
 
 });
-
 </script>
 @endpush
 @endsection

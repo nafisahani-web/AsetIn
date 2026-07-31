@@ -397,29 +397,48 @@ table.dataTable thead th{
     width:60px;
 }
 
-/* Kolom Nama Asset */
+/* No */
+#warrantyTable th:nth-child(1),
+#warrantyTable td:nth-child(1){
+    width:60px;
+}
+
+/* Nama Asset */
 #warrantyTable th:nth-child(2),
 #warrantyTable td:nth-child(2){
+    width:28%;
     text-align:left;
-    min-width:280px;
-    white-space:nowrap;
+    white-space:normal;
 }
 
-/* Kolom No Garansi */
-#warrantyTable th:nth-child(3){
-    width:180px;
+/* No Garansi */
+#warrantyTable th:nth-child(3),
+#warrantyTable td:nth-child(3){
+    width:12%;
 }
 
-/* Kolom Status */
+/* Tanggal Mulai */
+#warrantyTable th:nth-child(4),
+#warrantyTable td:nth-child(4){
+    width:14%;
+}
+
+/* Tanggal Berakhir */
+#warrantyTable th:nth-child(5),
+#warrantyTable td:nth-child(5){
+    width:14%;
+}
+
+/* Status */
 #warrantyTable th:nth-child(6),
 #warrantyTable td:nth-child(6){
-    width:120px;
+    width:10%;
 }
 
-/* Kolom Aksi */
-#warrantyTable th:last-child,
-#warrantyTable td:last-child{
-    width:170px;
+/* Aksi */
+#warrantyTable th:nth-child(7),
+#warrantyTable td:nth-child(7){
+    width:90px;
     text-align:center;
     white-space:nowrap;
 }
