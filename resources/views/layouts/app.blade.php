@@ -452,6 +452,7 @@ table.dataTable thead th{
     background:#f5f9ff;
 }
 
+
 /* ==========================
    BADGE STATUS
 ========================== */
@@ -503,6 +504,40 @@ table.dataTable thead th{
     border-left:5px solid #198754;
     border-radius:12px;
     box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+#assetTable{
+    width:100% !important;
+}
+
+#assetTable th{
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+#assetTable td{
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#assetTable td:nth-child(3){
+    min-width:220px;
+}
+
+#assetTable td:nth-child(6){
+    max-width:170px;
+}
+
+#assetTable td:nth-child(7){
+    max-width:150px;
+}
+
+#assetTable td:nth-child(9){
+    white-space:nowrap;
+}
+
+#assetTable td:nth-child(10){
+    white-space:nowrap;
 }
     </style>
 

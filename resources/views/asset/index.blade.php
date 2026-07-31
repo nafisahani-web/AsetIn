@@ -54,41 +54,28 @@
 
     <div class="card shadow-sm border-0">
 
-        <div class="card-body">
+    <div class="card-body">
+
+        <div class="table-responsive">
 
             <table
                 id="assetTable"
-                class="table table-bordered table-hover align-middle">
+                class="table table-hover align-middle w-100">
 
                 <thead class="table-dark">
-
-                <tr>
-
-                    <th width="60">No</th>
-
-                    <th>Kode Asset</th>
-
-                    <th>Nama Asset</th>
-
-                    <th>Category</th>
-
-                    <th>Brand</th>
-
-                    <th>Supplier</th>
-
-                    <th>Location</th>
-
-                    <th>Kondisi</th>
-
-                    <th>Status</th>
-
-                    <th width="170" class="text-center">
-                        Aksi
-                    </th>
-
-                </tr>
-
-                </thead>
+<tr>
+    <th>No</th>
+    <th>Kode Asset</th>
+    <th>Nama Asset</th>
+    <th>Category</th>
+    <th>Brand</th>
+    <th>Supplier</th>
+    <th>Location</th>
+    <th>Kondisi</th>
+    <th>Status</th>
+    <th class="text-center">Aksi</th>
+</tr>
+</thead>
 
                 <tbody>
 
@@ -941,19 +928,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new DataTable('#assetTable', {
 
-        language: {
-            search: "Cari :",
-            lengthMenu: "Tampilkan _MENU_ data",
-            info: "Menampilkan _START_ - _END_ dari _TOTAL_ data",
-            infoEmpty: "Belum ada data",
-            zeroRecords: "Data tidak ditemukan",
-            paginate: {
-                previous: "Sebelumnya",
-                next: "Berikutnya"
-            }
-        }
+    autoWidth: false,
 
-    });
+    language: {
+        search: "Cari :",
+        lengthMenu: "Tampilkan _MENU_ data",
+        info: "Menampilkan _START_ - _END_ dari _TOTAL_ data",
+        infoEmpty: "Belum ada data",
+        zeroRecords: "Data tidak ditemukan",
+        paginate: {
+            previous: "Sebelumnya",
+            next: "Berikutnya"
+        }
+    }
+
+});
 
     document.querySelectorAll('.form-delete').forEach(form => {
 
